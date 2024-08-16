@@ -1,0 +1,24 @@
+//
+// {{ name }}DIPart.swift
+//
+{% if author %}
+// Created by {{ author }}.
+{% endif %}
+// Copyright © {{ year }} Spider Group. All rights reserved.
+//
+
+import DITranquillity
+import UIKit
+
+// swiftlint:disable anonymous_argument_in_multiline_closure
+
+final class {{ name }}DIPart: DIPart {
+    static func load(container: DIContainer) {
+        container.register({{ name }}ViewModelImpl.init(service:router:))
+            .as({{ name }}ViewModel.self)
+
+        container.register({{ name }}ViewController.init(viewModel:))
+            .as({{ name }}ViewControllerTag.self)
+            .lifetime(.objectGraph)
+    }
+}

@@ -1,0 +1,26 @@
+//
+// {{ name }}Factory.swift
+//
+{% if author %}
+// Created by {{ author }}.
+{% endif %}
+// Copyright © {{ year }} Spider Group. All rights reserved.
+//
+
+import DITranquillity
+import RouteComposer
+import UIKit
+
+public final class {{ name }}Factory: Factory {
+    public typealias Context = Void
+
+    public var container: DIContainer
+
+    public init(container: DIContainer) {
+        self.container = container
+    }
+
+    public func build(with context: Context) throws -> some UIViewController {
+        container.resolve() as {{ name }}ViewController
+    }
+}

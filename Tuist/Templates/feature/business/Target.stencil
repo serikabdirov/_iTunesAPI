@@ -1,0 +1,27 @@
+//
+// {{ module }}Target.swift
+//
+{% if author %}
+// Created by {{ author }}.
+{% endif %}
+// Copyright © {{ year }} Spider Group. All rights reserved.
+//
+
+import Foundation
+import Networking
+
+#if MOCK
+typealias {{ module }}Target = {{ module }}TargetMock
+#else
+typealias {{ module }}Target = {{ module }}TargetApi
+#endif
+
+protocol {{ module }}TargetProtocol {}
+
+// MARK: - Api Target
+
+enum {{ module }}TargetApi: {{ module }}TargetProtocol {}
+
+// MARK: - Mock Target
+
+enum {{ module }}TargetMock: {{ module }}TargetProtocol {}

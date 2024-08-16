@@ -1,0 +1,48 @@
+//
+// {{ name }}ViewModel.swift
+//
+{% if author %}
+// Created by {{ author }}.
+{% endif %}
+// Copyright © {{ year }} Spider Group. All rights reserved.
+//
+
+import Foundation
+import RxSwift
+import RxRelay
+import RxCocoa
+import Core
+
+public protocol {{ name }}ViewModel: AnyObject {
+    // output
+    var isLoading: Driver<Bool> { get }
+    var errorMessage: Signal<String> { get }
+    
+    // input
+}
+
+final class {{ name }}ViewModelImpl: {{ name }}ViewModel {
+
+    // MARK: - Public properties
+
+    @DriverFromBehaviorRelay(defaultValue: 0, transform: { $0.map { $0 != 0 } })
+    var isLoading: Driver<Bool>
+    @SignalFromPublishRelay()
+    var errorMessage: Signal<String>
+
+    // MARK: - Private properties
+
+    private let service: {{ module }}Service
+    private let router: {{ name }}Router
+    private let disposeBag = DisposeBag()
+
+    // MARK: - Init
+
+    init(
+        service: {{ module }}Service,
+        router: {{ name }}Router
+    ) {
+        self.service = service
+        self.router = router
+    }
+}

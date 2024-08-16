@@ -1,0 +1,5 @@
+import ProjectDescription
+import ProjectDescriptionHelpers
+
+let target = Target.featureModule(name: "{{ module }}")
+let project = Project.module(name: "{{ module }}", targets: [target])

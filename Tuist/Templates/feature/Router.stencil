@@ -1,0 +1,12 @@
+//
+// {{ name }}Router.swift
+//
+{% if author %}
+// Created by {{ author }}.
+{% endif %}
+// Copyright © {{ year }} Spider Group. All rights reserved.
+//
+
+import Foundation
+
+public protocol {{ name }}Router {}

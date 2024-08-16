@@ -1,0 +1,37 @@
+//
+// {{ name }}RouterImpl.swift
+//
+{% if author %}
+// Created by {{ author }}.
+{% endif %}
+// Copyright © {{ year }} Spider Group. All rights reserved.
+//
+
+import DITranquillity
+import DesignSystem
+import RouteComposer
+import {{ module }}
+
+final class {{ name }}RouterImpl {
+    // MARK: - Public properties
+
+    weak var viewController: UIViewController?
+
+    // swiftlint:disable:next implicitly_unwrapped_optional
+    var container: DIContainer!
+
+    // MARK: - Private properties
+
+    private lazy var router = DefaultRouter()
+}
+
+extension {{ name }}RouterImpl: {{ name }}Router {}
+
+extension {{ name }}RouterImpl {
+    static func register(in container: DIContainer) {
+        container.register({{ name }}RouterImpl.init)
+            .injection(\.container)
+            .injection(cycle: true, \.viewController) { $0 as {{ name }}ViewControllerTag }
+            .as({{ name }}Router.self)
+    }
+}

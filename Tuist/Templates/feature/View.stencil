@@ -1,0 +1,37 @@
+//
+// {{ name }}View.swift
+//
+{% if author %}
+// Created by {{ author }}.
+{% endif %}
+// Copyright © {{ year }} Spider Group. All rights reserved.
+//
+
+import DesignSystem
+
+public final class {{ name }}View: UIView {
+
+    // MARK: - Public properties
+
+    // MARK: - Private properties
+
+    // MARK: - Init
+
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+        setupViews()
+        setupConstraints()
+    }
+
+    public required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupViews()
+        setupConstraints()
+    }
+
+    // MARK: - Private methods
+
+    private func setupViews() {}
+
+    private func setupConstraints() {}
+}

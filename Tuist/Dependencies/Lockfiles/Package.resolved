@@ -1,0 +1,86 @@
+{
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire",
+      "state" : {
+        "revision" : "f455c2975872ccd2d9c81594c658af65716e9b9a",
+        "version" : "5.9.1"
+      }
+    },
+    {
+      "identity" : "bettercodable",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/marksands/BetterCodable",
+      "state" : {
+        "revision" : "61153170668db7a46a20a87e35e70f80b24d4eb5",
+        "version" : "0.4.0"
+      }
+    },
+    {
+      "identity" : "ditranquillity",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ivlevAstef/DITranquillity",
+      "state" : {
+        "revision" : "d344a1d9b5394d1f2ad96a95d610330559906e45",
+        "version" : "4.6.0"
+      }
+    },
+    {
+      "identity" : "nuke",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/Nuke",
+      "state" : {
+        "revision" : "0ead44350d2737db384908569c012fe67c421e4d",
+        "version" : "12.8.0"
+      }
+    },
+    {
+      "identity" : "route-composer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ekazaev/route-composer",
+      "state" : {
+        "revision" : "7ef173da8078b98f24f75593188ddf8fcc1ca0d5",
+        "version" : "2.10.2"
+      }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "state" : {
+        "revision" : "b06a8c8596e4c3e8e7788e08e720e3248563ce6a",
+        "version" : "6.7.1"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit",
+      "state" : {
+        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
+        "version" : "5.7.1"
+      }
+    },
+    {
+      "identity" : "svprogresshud",
+      "kind" : "remoteSourceControl",
+      "location" : "https://gitlab.spider.ru/forks/SVProgressHUD.git",
+      "state" : {
+        "revision" : "22050efa35f836f465c36b96c40a20e55f4267d4",
+        "version" : "2.2.10"
+      }
+    },
+    {
+      "identity" : "swiftlazy",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ivlevAstef/SwiftLazy.git",
+      "state" : {
+        "revision" : "49a47304bb06643fa22d981b6b8301acc5bcb366",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 2
+}

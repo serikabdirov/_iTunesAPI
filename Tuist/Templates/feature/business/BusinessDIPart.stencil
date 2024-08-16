@@ -1,0 +1,24 @@
+//
+// {{ module }}DIPart.swift
+//
+{% if author %}
+// Created by {{ author }}.
+{% endif %}
+// Copyright © {{ year }} Spider Group. All rights reserved.
+//
+
+import DITranquillity
+import UIKit
+
+// swiftlint:disable anonymous_argument_in_multiline_closure
+
+final class {{ module }}BusinessDIPart: DIPart {
+    static func load(container: DIContainer) {
+        container.register {
+            {{ module }}ServiceImpl(
+                apiClient: $0
+            )
+        }
+        .as({{ module }}Service.self)
+    }
+}

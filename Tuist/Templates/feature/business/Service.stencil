@@ -1,0 +1,13 @@
+//
+// {{ module }}Service.swift
+//
+{% if author %}
+// Created by {{ author }}.
+{% endif %}
+// Copyright © {{ year }} Spider Group. All rights reserved.
+//
+
+import Foundation
+import RxSwift
+
+protocol {{ module }}Service {}
